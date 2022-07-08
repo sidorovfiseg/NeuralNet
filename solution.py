@@ -1,5 +1,5 @@
 from processing import data_processing
-from neuron_net import NARXModel
+from neural_net import NARXModel
 from database_work import create_connection
 from graphics import print_save_graphic
 
