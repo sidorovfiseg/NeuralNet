@@ -1,10 +1,9 @@
 from processing import data_processing
 
-import database_work
 from neural_net import NARXModel
 from database_work import create_connection
 from graphics import print_save_graphic
-import json
+
 
 def run():
 

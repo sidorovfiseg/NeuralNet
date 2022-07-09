@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-from sklearn import preprocessing
 from processing import fitter
 # рисуем и сохраняем графики
 
