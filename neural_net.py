@@ -1,9 +1,9 @@
 import random
 
 import numpy as np
+
 from pyneurgen.neuralnet import NeuralNet
 from pyneurgen.recurrent import NARXRecurrent
-
 
 class NARXModel:
     # Конструктор

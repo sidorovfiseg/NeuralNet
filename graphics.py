@@ -15,5 +15,6 @@ def print_save_graphic(target_and_prediction, path):
         abs(fitter.inverse_transform(pd.DataFrame(target_and_prediction[0])) -
             fitter.inverse_transform(pd.DataFrame(target_and_prediction[1]))))
     plt.legend(['error'])
-    plt.show()
     plt.savefig(path)
+    plt.show()
+

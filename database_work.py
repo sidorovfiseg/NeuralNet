@@ -3,6 +3,9 @@ import psycopg2
 from psycopg2 import OperationalError
 import localdata_read as ldr
 import requests
+import os
+
+import requests.exceptions as ex
 
 # Function which create connection with postgreSQL
 # Функция, которая создает подключение к postgreSQL
@@ -15,9 +18,10 @@ def create_connection(api_url):
         jsn = responce.json()
         print("Connection is success")
         return read_data_from_json(jsn)
-    except OperationalError as e:
-        print(f"The error 'e' occurred, using local data_csv")
-        return ldr.read_data_from_csv("resources/data.csv")
+    except ex.ConnectionError as e:
+        print(f"Connection error occurred, using local data.csv")
+        path = os.getcwd() + "\\resources\\data.csv"
+        return ldr.read_data_from_csv(path)
 
 
 # Парсинг json
